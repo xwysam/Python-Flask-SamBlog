@@ -1,0 +1,49 @@
+{% extends 'nav_bar.html' %}
+
+
+{% block tital %}
+    Login page
+{% endblock %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="container bootstrap snippet">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+            <h3 class="text-muted prj-name">Login page</h3>
+        </div>
+
+        <div style="height:auto;min-height:400px;" class="jumbotron">
+            <div class="col-md-4">
+                <img class="img-responsive center-block img-user" src="https://bootdey.com/img/Content/Manbrown2.png">
+            </div>
+            <div class="col-md-6 form-content">
+                <form accept-charset="utf-8" method="post" id="UserLoginForm" class="form-signin" action="">
+                    <h1 class="form-signin-heading text-muted">Login</h1>
+                    <input type="text" id="username" autofocus="autofocus" placeholder="Username" class="form-control" name="username">
+                    <br/>
+                    <input type="password" id="password" placeholder="Password" class="form-control" name="password">
+                    <br/>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked" name = "remember">
+                        <label class="custom-control-label" for="defaultUnchecked">Rember Me</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-lg btn-info btn-block" value="login">
+                        <i class="fa fa-share"></i>
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

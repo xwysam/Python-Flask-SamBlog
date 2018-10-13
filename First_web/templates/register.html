@@ -1,0 +1,51 @@
+{% extends 'nav_bar.html' %}
+
+{% block tital %}
+    Register page
+{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+
+{% endblock %}
+
+{% block body %}
+    <div class="container bootstrap snippet">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+            <h3 class="text-muted prj-name">Register page</h3>
+        </div>
+
+        <div style="height:auto;min-height:500px;" class="jumbotron">
+            <div class="col-md-4">
+                <img class="img-responsive center-block img-user" src="https://bootdey.com/img/Content/Manbrown2.png">
+            </div>
+            <div class="col-md-6 form-content">
+                <form accept-charset="utf-8" method="post" id="UserLoginForm" class="form-signin" action="">
+                    <h2 class="form-signin-heading text-muted">Register: </h2>
+                    <input type="text" id="username" autofocus="autofocus" placeholder="Username" class="form-control" name="username">
+                    <br/>
+                    <input type="text" id="email" autofocus = autofocus placeholder="Email" class="form-control" name="email">
+                    <br/>
+                    <input type="password" id="password1" placeholder="Password" class="form-control" name="password1">
+                    <br/>
+                    <input type="password" id="password2" placeholder="ReEnter Password" class="form-control" name="password2">
+                    <br/>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                        <label class="custom-control-label" for="defaultUnchecked">Auto Login</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-lg btn-info btn-block" value="login">
+                        <i class="fa fa-share"></i>
+                        Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

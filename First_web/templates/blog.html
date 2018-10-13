@@ -1,0 +1,45 @@
+{% extends 'nav_bar.html' %}
+
+
+
+{% block tital %}
+    blog
+{% endblock %}
+
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container bootstrap snippet">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="#">&nbsp;</a></li>
+            </ul>
+            <h3 class="text-muted prj-name">BLOG</h3>
+        </div>
+
+        <div style="height:auto;min-height:400px;" class="jumbotron">
+            <div class="col-md-4">
+                <img class="img-responsive center-block img-user" src="https://bootdey.com/img/Content/Manbrown2.png">
+            </div>
+            <div class="col-md-6 form-content">
+                <form accept-charset="utf-8" method="post" id="UserLoginForm" class="form-signin" action="">
+
+                    <h2 class="form-signin-heading">contents：</h2>
+                    <input type="text" id="tital" autofocus="autofocus" placeholder="Tital" class="form-control" name="title">
+                    <br/>
+                    <textarea name="content" rows="5" autofocus = "autofocus" placeholder="Please Enter The Content" class="form-control"></textarea>
+                    <br/>
+                    <button type="submit" class="btn btn-lg btn-info btn-block" value="submit">
+                        <i class="fa fa-share"></i>
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

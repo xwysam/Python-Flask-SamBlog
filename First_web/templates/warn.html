@@ -1,0 +1,32 @@
+{% extends 'nav_bar.html' %}
+
+
+
+{% block tital %}
+    warning
+{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/warn.css') }}" />
+    <script src="{{ url_for('static',filename='js/timer.js') }}"></script>
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="informs">
+        <h4>WARNING</h4>
+        <p>
+            <span class="key-message">Searching Not Found</span>
+        </p>
+        <p>
+            <span class="timer" id="timer"> 20 </span> second Return to Home
+        </p>
+        <div class="jump-button">
+            <button class="btn btn-default pull-right" type="submit" onclick="location='{{ url_for('index') }}'">Return</button>
+        </div>
+    </div>
+    <script type="text/javascript">timetojump(20,"{{ url_for('index') }}");</script>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'nav_bar.html' %}
+
+{% block tital %}
+    Main-page
+{% endblock %}
+
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/index.css')}}">
+
+{% endblock %}
+
+
+
+{% block body %}
+    <ul class="question-list-group">
+        {% for artical in articles  %}
+            <li>
+                <div style="height:auto;min-height:auto;" class="jumbotron">
+                    <div class="question-group" >
+                        <p class="question-tital" ><a href="{{ url_for('detail', article_id=artical.id) }}">{{artical.title}}</a></p>
+                        <p class="question-contant" >{{ artical.content }}</p>
+                        <div class="question-info">
+                            <span class="question-author">{{ artical.author.username }}</span>
+                            <span class="time" >{{ artical.time }}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
